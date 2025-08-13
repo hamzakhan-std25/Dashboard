@@ -2,6 +2,7 @@ import React from 'react'
 import StatCards from './StatCards'
 import ActivityGraph from './ActivityGraph'
 import UsageRedar from './UsageRedar'
+import RecentTransaction from './RecentTransaction'
 
 export default function Grid() {
   return (
@@ -9,6 +10,7 @@ export default function Grid() {
       <StatCards/>
       <ActivityGraph/>
       <UsageRedar/>
+      <RecentTransaction/>
     </div>
   )
 }
