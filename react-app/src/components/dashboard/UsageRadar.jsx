@@ -24,25 +24,9 @@ export default function UsageRadar() {
           <RadarChart outerRadius={90} cx="50%" cy="50%" data={data}>
             <PolarGrid stroke="#e5e7eb" />
             <PolarAngleAxis dataKey="category" tick={{ fill: '#6b7280', fontSize: 12 }} />
-            <PolarRadiusAxis
-              angle={30}
-              domain={[0, 150]}
-              tick={{ fill: '#6b7280', fontSize: 11 }}
-            />
-            <Radar
-              name="Q1 Performance"
-              dataKey="Q1"
-              stroke="#6366f1"
-              fill="#6366f1"
-              fillOpacity={0.4}
-            />
-            <Radar
-              name="Q2 Performance"
-              dataKey="Q2"
-              stroke="#10b981"
-              fill="#10b981"
-              fillOpacity={0.4}
-            />
+            <PolarRadiusAxis angle={30} domain={[0, 150]} tick={{ fill: '#6b7280', fontSize: 11 }} />
+            <Radar name="Q1 Performance" dataKey="Q1" stroke="#6366f1" fill="#6366f1" fillOpacity={0.4} />
+            <Radar name="Q2 Performance" dataKey="Q2" stroke="#10b981" fill="#10b981" fillOpacity={0.4} />
             <Legend wrapperStyle={{ fontSize: 12 }} />
           </RadarChart>
         </ResponsiveContainer>

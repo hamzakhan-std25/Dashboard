@@ -1,30 +1,20 @@
 import React from 'react'
-
-const transactions = [
-  { date: '2025-08-12', id: '#TXN001', customer: 'John Smith', amount: 1200, status: 'Paid', method: 'Credit Card' },
-  { date: '2025-08-11', id: '#TXN002', customer: 'Alice Johnson', amount: 850, status: 'Pending', method: 'PayPal' },
-  { date: '2025-08-11', id: '#TXN003', customer: 'Michael Lee', amount: 430, status: 'Failed', method: 'Bank Transfer' },
-  { date: '2025-08-10', id: '#TXN004', customer: 'Sarah Wilson', amount: 3200, status: 'Paid', method: 'Credit Card' },
-  { date: '2025-08-09', id: '#TXN005', customer: 'David Kim', amount: 2700, status: 'Paid', method: 'PayPal' },
-  { date: '2025-08-08', id: '#TXN006', customer: 'Emily Davis', amount: 650, status: 'Pending', method: 'Credit Card' },
-  { date: '2025-08-08', id: '#TXN007', customer: 'James Brown', amount: 1500, status: 'Paid', method: 'Bank Transfer' },
-  { date: '2025-08-07', id: '#TXN008', customer: 'Linda Martinez', amount: 980, status: 'Failed', method: 'Credit Card' },
-]
+import { transactions } from '../../data/transactions'
 
 export default function RecentTransaction() {
   return (
     <div className="col-span-12 bg-white overflow-hidden rounded-lg border border-gray-200">
       <div className="px-8 py-4 flex items-center justify-between border-b border-gray-100">
         <h3 className="font-semibold text-gray-800">Transaction History</h3>
-        <button className="text-sm text-violet-500 hover:underline">See all</button>
+        <a href="#" className="text-sm text-violet-500 hover:underline">See all</a>
       </div>
 
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm text-left">
           <TableHead />
           <tbody className="divide-y divide-gray-100">
-            {transactions.map((txn, idx) => (
-              <TableRow key={idx} {...txn} />
+            {transactions.map((txn) => (
+              <TableRow key={txn.id} {...txn} />
             ))}
           </tbody>
         </table>
@@ -68,7 +58,7 @@ const TableRow = ({ date, id, customer, amount, status, method }) => {
         </span>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">{method}</td>
-      <td className="px-6 py-4"><button className=' cursor-pointer text-green-600 font-medium hover:text-orange-400 hover:underline'>Full details</button></td>
+      <td className="px-6 py-4"><a href='#' className=' cursor-pointer text-green-600 font-medium hover:text-orange-400 hover:underline'>Full details</a></td>
     </tr>
   )
 }
