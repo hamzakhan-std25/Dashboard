@@ -11,6 +11,7 @@ export default function Grid() {
       <ActivityGraph/>
       <UsageRedar/>
       <RecentTransaction/>
+      
     </div>
   )
 }
