@@ -4,7 +4,7 @@ import Grid from './Grid'
 
 export default function Dashboard() {
   return (
-    <div className=' bg-white rounded-lg shadow h-[200vh]'>
+    <div className=' bg-white rounded-lg shadow '>
       <Topbar/>
       <Grid/>
     </div>
