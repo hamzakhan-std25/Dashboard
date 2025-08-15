@@ -1,7 +1,7 @@
 import React from 'react'
 import StatCards from './StatCards'
 import ActivityGraph from './ActivityGraph'
-import UsageRedar from './UsageRedar'
+import UsageRadar from './UsageRadar'
 import RecentTransaction from './RecentTransaction'
 
 export default function Grid() {
@@ -9,7 +9,7 @@ export default function Grid() {
     <div className=' px-4 grid gap-3 grid-cols-12'>
       <StatCards/>
       <ActivityGraph/>
-      <UsageRedar/>
+      <UsageRadar/>
       <RecentTransaction/>
       
     </div>

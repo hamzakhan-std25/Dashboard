@@ -4,17 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer
 } from 'recharts'
-
-// Example business dashboard data (Monthly Revenue & Active Users)
-const data = [
-  { month: 'Jan', revenue: 42000, users: 1200 },
-  { month: 'Feb', revenue: 38000, users: 1100 },
-  { month: 'Mar', revenue: 45000, users: 1350 },
-  { month: 'Apr', revenue: 47000, users: 1500 },
-  { month: 'May', revenue: 52000, users: 1650 },
-  { month: 'Jun', revenue: 49000, users: 1580 },
-  { month: 'Jul', revenue: 56000, users: 1720 },
-]
+import { activityData } from '../../data/activity'
 
 export default function ActivityGraph() {
   return (
@@ -27,7 +17,7 @@ export default function ActivityGraph() {
       <div className="h-72 px-4 py-2">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
-            data={data}
+            data={activityData}
             margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />

@@ -17,7 +17,7 @@ export default function CommandMenu({ open, setOpen }) {
 
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
-  }, [])
+  }, [setOpen])
 
   return (
     <Command.Dialog open={open} onOpenChange={setOpen} label="Global Command Menu"
@@ -25,7 +25,7 @@ export default function CommandMenu({ open, setOpen }) {
       onClick={() => setOpen(false)}
     >
       <div onClick={(e) => e.stopPropagation()}
-        className='bg-white rounded-lg shadow-xl border-stone-300b border overflow-hidden w-full max-w-lg mx-auto mt-12'>
+        className='bg-white rounded-lg shadow-xl border-stone-300 border overflow-hidden w-full max-w-lg mx-auto mt-12'>
         <Command.Input
           value={value}
           onValueChange={setValue}

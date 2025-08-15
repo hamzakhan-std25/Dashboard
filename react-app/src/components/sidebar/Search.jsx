@@ -17,8 +17,9 @@ export default function Search() {
 
         }}
         placeholder='Search'
+        aria-label='Search'
         className='w-full bg-transparent placeholder:text-stone-400 focus:outline-none' />
-        <span className='flex p-1 text-xs gap-0.5 items-center shadow bg-stone-50 rounded absolute right-1.5 top-1/2 -translate-y-1/2'>
+        <span className='flex p-1 text-xs gap-0.5 items-center shadow bg-stone-50 rounded absolute right-1.5 top-1/2 -translate-y-1/2' aria-hidden='true'>
             <FiCommand />K
         </span>
         
